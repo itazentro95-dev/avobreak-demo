@@ -1,0 +1,269 @@
+/* Hallmark · AvoBreak demo · tokens-only design system */
+/* Design identity: "Le journal du midi" — a field journal of the 3.5-hour lunch
+   day. Palette: warm paper, deep forest ink, deep avocado green, antique ochre.
+   Colour literals live in :root only. No form controls exist on this page, so
+   :disabled does not apply (sloplint 26b waived with this reason). */
+:root{
+  --paper:#F1EAD9;
+  --paper-deep:#E6DBC0;
+  --card:#F7F2E3;
+  --ink:#22301F;
+  --ink-soft:#46523F;
+  --vert:#33502F;
+  --vert-deep:#1E3319;
+  --ocre:#B0822A;
+  --ligne:#C8B98F;
+  --paper-line:rgba(241,234,217,.25);
+  --shadow:0 24px 48px -24px rgba(30,51,25,.35);
+  --shadow-soft:0 12px 28px -14px rgba(30,51,25,.28);
+  --radius:18px;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{
+  font-family:var(--font-body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  padding-bottom:64px; /* room for mobile bar */
+  overflow-x:clip;
+}
+img{display:block;max-width:100%}
+a{color:var(--vert)}
+:focus-visible{outline:3px solid var(--ocre);outline-offset:2px}
+
+/* ---------- topbar / header ---------- */
+.topbar{
+  display:flex;justify-content:space-between;gap:1rem;align-items:center;
+  background:var(--vert-deep);color:var(--paper);
+  font-size:.78rem;letter-spacing:.04em;padding:.45rem 1.1rem;
+}
+.topbar a{color:var(--paper);font-weight:600;text-decoration:none}
+.topbar-mid{opacity:.85}
+.site-header{
+  position:sticky;top:0;z-index:40;
+  display:flex;align-items:center;gap:1.2rem;
+  padding:.7rem 1.1rem;
+  background:var(--paper);
+  border-bottom:1px solid var(--ligne);
+}
+.brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--vert-deep)}
+.brand-fan{width:40px;height:25px;color:var(--vert);flex:none}
+.brand-name{font-family:var(--font-display);font-weight:700;font-size:1.45rem;letter-spacing:.01em;color:var(--ink)}
+.main-nav{display:flex;gap:1.4rem;margin-left:auto}
+.main-nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.98rem;padding:.5rem .2rem}
+.main-nav a:hover{color:var(--vert)}
+.header-actions{display:flex;align-items:center;gap:.7rem;margin-left:auto}
+.main-nav + .header-actions{margin-left:0}
+.lang-switch{display:flex;border:1.5px solid var(--vert);border-radius:999px;overflow:hidden}
+.lang-btn{border:0;background:transparent;color:var(--vert);font:600 .8rem var(--font-body);padding:.5rem .8rem;cursor:pointer;min-height:44px}
+.lang-btn.is-active{background:var(--vert);color:var(--paper)}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  min-height:48px;padding:.7rem 1.4rem;border-radius:999px;
+  font:600 1rem var(--font-body);text-decoration:none;border:1.5px solid var(--vert);
+  transition:transform .25s ease,background .25s ease,color .25s ease;
+}
+.btn svg{width:18px;height:18px}
+.btn-call{background:var(--vert);color:var(--paper)}
+.btn-call:hover{background:var(--vert-deep)}
+.btn-primary{background:var(--vert);color:var(--paper)}
+.btn-primary:hover{background:var(--vert-deep);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--vert)}
+.btn-ghost:hover{background:var(--paper-deep)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:3.2rem 1.1rem 2.6rem;overflow:hidden}
+.fan-stage{position:absolute;inset:auto 0 0 0;height:230px;color:var(--vert);pointer-events:none}
+.fan{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);width:min(680px,120vw);height:auto}
+.fan-back{opacity:.16}
+.fan-mid{opacity:.10}
+.hero-grid{position:relative;display:grid;gap:2.2rem;max-width:1180px;margin:0 auto;align-items:center}
+.hero-title{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(2.9rem,11vw,6.4rem);line-height:.98;letter-spacing:-.01em;
+  margin:.7rem 0 1.1rem;color:var(--ink);
+  text-wrap:balance;
+}
+.hero-title .line{display:block}
+.hero-title .em{color:var(--vert);font-style:italic}
+.hero-sub{font-size:1.13rem;color:var(--ink-soft);max-width:34rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.6rem 0 1.1rem}
+.hero-press{font-size:.92rem;color:var(--ink-soft);max-width:30rem}
+.hero-press::before{content:"";display:inline-block;width:9px;height:9px;background:var(--vert);margin-right:.55rem}
+.hero-visual{perspective:1100px}
+.hero-frame{
+  position:relative;transform-style:preserve-3d;
+  border-radius:var(--radius);background:var(--card);
+  padding:.7rem;box-shadow:var(--shadow);
+  will-change:transform;
+}
+.hero-img-wrap{border-radius:12px;overflow:hidden}
+.hero-img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transform:scale(1.12);will-change:transform}
+.hero-ticket{
+  position:absolute;left:1.2rem;bottom:1.2rem;
+  transform:translateZ(44px);
+  background:var(--vert-deep);color:var(--paper);
+  border-radius:12px;padding:.65rem 1rem;box-shadow:var(--shadow-soft);
+  display:flex;flex-direction:column;line-height:1.25;
+}
+.ticket-big{font-family:var(--font-display);font-weight:600;font-size:1.15rem}
+.ticket-small{font-size:.8rem;opacity:.85}
+
+/* ---------- strip ---------- */
+.strip{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-top:1px solid var(--ligne);border-bottom:1px solid var(--ligne);
+  max-width:1180px;margin:1.4rem auto 0;
+}
+.strip-cell{padding:1.1rem 1rem;display:flex;flex-direction:column;gap:.1rem;border-bottom:1px solid var(--ligne)}
+.strip-cell:nth-child(odd){border-right:1px solid var(--ligne)}
+.strip-cell:nth-child(3),.strip-cell:nth-child(4){border-bottom:0}
+.strip-big{font-family:var(--font-display);font-weight:600;font-size:1.3rem;color:var(--ink)}
+.strip-small{font-size:.88rem;color:var(--ink-soft)}
+
+/* ---------- sections ---------- */
+section{padding:3.4rem 1.1rem}
+.section-head{max-width:1180px;margin:0 auto 2.2rem}
+.section-head h2,.terrace-quote p{
+  font-family:var(--font-display);font-weight:600;
+  font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;color:var(--ink);margin:.6rem 0 .8rem;
+  text-wrap:balance;
+}
+.section-lede{color:var(--ink-soft);max-width:38rem;font-size:1.05rem}
+
+/* carte */
+.carte{position:relative;max-width:1180px;margin:0 auto}
+.fan-divider{display:block;width:190px;margin:0 auto 1.6rem;color:var(--vert);opacity:.55;will-change:transform}
+.carte-list{list-style:none;max-width:860px;margin:0 auto;border-top:1px solid var(--ligne)}
+.carte-row{
+  display:grid;grid-template-columns:52px 1fr;gap:.4rem 1rem;align-items:start;
+  padding:1.25rem .4rem;border-bottom:1px solid var(--ligne);
+}
+.carte-num{font-family:var(--font-display);font-weight:600;font-size:1.5rem;color:var(--ocre);line-height:1.2;font-variant-numeric:tabular-nums}
+.carte-body h3{font-family:var(--font-display);font-weight:600;font-size:1.45rem;color:var(--ink)}
+.carte-body p{color:var(--ink-soft);max-width:34rem}
+.carte-tag{
+  grid-column:2;justify-self:start;
+  font:600 .8rem var(--font-body);color:var(--vert);
+  border:1.5px solid var(--vert);border-radius:999px;padding:.3rem .7rem;
+}
+.carte-note{max-width:860px;margin:1.6rem auto 0;color:var(--ink-soft);font-size:.95rem;border-top:1px solid var(--ligne);padding-top:.9rem}
+
+/* gallery */
+.gallery{max-width:1180px;margin:0 auto}
+.gallery-track{
+  display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:.4rem .2rem 1rem;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.gallery-track::-webkit-scrollbar{display:none}
+.g-card{flex:0 0 78%;scroll-snap-align:center;perspective:900px}
+.g-frame{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);transform-style:preserve-3d;will-change:transform}
+.g-frame img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.g-card figcaption{margin-top:.6rem;font-size:.92rem;color:var(--ink-soft)}
+.gallery-hint{color:var(--ink-soft);font-size:.9rem}
+
+/* rituel */
+.rituel{max-width:1180px;margin:0 auto}
+.rituel-grid{display:grid;gap:1rem}
+.rituel-card{
+  background:var(--card);border:1px solid var(--ligne);border-radius:var(--radius);
+  padding:1.5rem 1.3rem;box-shadow:var(--shadow-soft);
+}
+.rituel-hour{font-family:var(--font-display);font-weight:700;font-size:2rem;color:var(--vert);font-variant-numeric:tabular-nums}
+.rituel-card h3{font-family:var(--font-display);font-weight:600;font-size:1.35rem;margin:.4rem 0 .5rem;color:var(--ink)}
+.rituel-card p{color:var(--ink-soft)}
+
+/* terrace */
+.terrace{max-width:1180px;margin:0 auto;padding-top:1rem}
+.terrace-frame{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.terrace-img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;transform:scale(1.14);will-change:transform}
+.terrace-quote{margin-top:1.8rem;max-width:46rem}
+.terrace-quote p{font-size:clamp(1.6rem,4.5vw,2.6rem);color:var(--vert-deep)}
+.terrace-quote cite{font-style:normal;color:var(--ink-soft);font-size:.95rem}
+
+/* visite */
+.visite{max-width:1180px;margin:0 auto}
+.visite-grid{display:grid;gap:1rem}
+.visite-card{background:var(--card);border:1px solid var(--ligne);border-radius:var(--radius);padding:1.6rem 1.4rem;box-shadow:var(--shadow-soft)}
+.visite-card h3{font-family:var(--font-display);font-weight:600;font-size:1.5rem;margin-bottom:1rem;color:var(--ink)}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table th,.hours-table td{padding:.55rem 0;border-bottom:1px solid var(--ligne);text-align:left;font-size:1rem}
+.hours-table th{font-weight:600;color:var(--ink)}
+.hours-table td{color:var(--ink-soft);text-align:right;font-variant-numeric:tabular-nums}
+.visite-note{margin-top:1rem;color:var(--ink-soft);font-size:.93rem}
+.visite-line{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px solid var(--ligne);font-size:1rem}
+.visite-line strong{color:var(--ink)}
+.visite-line a{font-weight:600;text-decoration:none}
+.visite-line a:hover{text-decoration:underline}
+.visite-ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.3rem}
+
+/* footer */
+.site-footer{
+  background:var(--vert-deep);color:var(--paper);
+  padding:2.4rem 1.1rem 3rem;margin-top:2rem;
+}
+.footer-brand{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-weight:600;font-size:1.2rem;max-width:1180px;margin:0 auto 1rem}
+.footer-brand .brand-fan{color:var(--paper)}
+.footer-note{max-width:1180px;margin:0 auto;font-size:.86rem;opacity:.8;line-height:1.6}
+
+/* mobile bar */
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  background:var(--vert-deep);
+}
+.mobile-bar a{
+  color:var(--paper);text-decoration:none;font-weight:600;font-size:.95rem;
+  min-height:56px;display:flex;align-items:center;justify-content:center;
+  border-right:1px solid var(--paper-line);
+}
+.mobile-bar a:last-child{border-right:0}
+
+/* reveals — visible by default; the hidden state is scoped under .js,
+   which script.js adds only when it actually runs */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+.js .reveal{opacity:0;transform:translateY(22px) rotateX(4deg)}
+.js .reveal.is-in{opacity:1;transform:none}
+
+/* active states */
+.btn:active{transform:translateY(1px)}
+.main-nav a:active,.visite-line a:active{color:var(--ocre)}
+.lang-btn:active{background:var(--paper-deep)}
+.mobile-bar a:active{background:var(--vert)}
+
+/* ---------- desktop ---------- */
+@media (min-width:760px){
+  body{padding-bottom:0}
+  .mobile-bar{display:none}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+  .strip{grid-template-columns:repeat(4,1fr)}
+  .strip-cell{border-bottom:0;border-right:1px solid var(--ligne)}
+  .strip-cell:last-child{border-right:0}
+  .carte-row{grid-template-columns:64px 1fr auto;align-items:center}
+  .carte-tag{grid-column:auto;justify-self:end}
+  .g-card{flex-basis:44%}
+  .rituel-grid{grid-template-columns:repeat(3,1fr)}
+  .visite-grid{grid-template-columns:1fr 1fr}
+  .topbar{padding:.45rem 2rem}
+  .site-header{padding:.7rem 2rem}
+  section{padding:4.4rem 2rem}
+  .hero{padding:4.6rem 2rem 3.4rem}
+}
+@media (max-width:560px){
+  .topbar{font-size:.74rem}
+  .topbar a{white-space:nowrap}
+  .main-nav{display:none}
+  .topbar-mid{display:none}
+  .btn-call span{display:none}
+  .btn-call{padding:.7rem .9rem}
+}
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .hero-img,.terrace-img{transform:none}
+  *{transition:none!important;animation:none!important}
+}

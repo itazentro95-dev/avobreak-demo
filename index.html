@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.title">AvoBreak : bar à avocat, Eaux-Vives, Genève</title>
+<meta name="description" content="AvoBreak, bar à avocat aux Eaux-Vives, Genève : salades, poke bowls et toasts à l'avocat, le midi seulement, du lundi au vendredi. Healthy homemade food.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span data-i18n="top.addr">Rue Adrien-Lachenal 6, Eaux-Vives</span>
+  <span class="topbar-mid" data-i18n="top.hours">Du lundi au vendredi, 10 h 30 à 14 h 00</span>
+  <a class="topbar-tel" href="tel:+41225597477">022 559 74 77</a>
+</div>
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="AvoBreak">
+    <svg class="brand-fan" viewBox="0 0 48 30" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 27 A18 18 0 0 1 42 27"/><path d="M12.5 27 A11.5 11.5 0 0 1 35.5 27"/><path d="M19 27 A5 5 0 0 1 29 27"/><path class="fan-ray" d="M24 27 L24 9"/><path class="fan-ray" d="M24 27 L11 14"/><path class="fan-ray" d="M24 27 L37 14"/></g></svg>
+    <span class="brand-name">AvoBreak</span>
+  </a>
+  <nav class="main-nav" aria-label="Navigation principale">
+    <a href="#carte" data-i18n="nav.carte">La carte</a>
+    <a href="#images" data-i18n="nav.images">En images</a>
+    <a href="#rituel" data-i18n="nav.rituel">Le rituel</a>
+    <a href="#visite" data-i18n="nav.visite">Visite</a>
+  </nav>
+  <div class="header-actions">
+    <div class="lang-switch" role="group" aria-label="Langue / Language">
+      <button type="button" class="lang-btn is-active" data-lang="fr">FR</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <a class="btn btn-call" href="tel:+41225597477">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5c.6-.6 1.6-.6 2.1.1l1.5 1.8c.5.6.5 1.5 0 2.1L9 8.7c.8 1.7 2.5 3.4 4.2 4.2l1.2-1.2c.6-.5 1.5-.5 2.1 0l1.8 1.5c.7.5.7 1.5.1 2.1l-1.3 1.3c-.6.6-1.4.8-2.2.6C9.6 16.4 7.6 14.4 6.4 12S4.6 7.4 5.3 5.8c.1-.8.7-1.7 1.3-2.3Z" fill="currentColor"/></svg>
+      <span>022 559 74 77</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="fan-stage" aria-hidden="true">
+      <svg class="fan fan-back" data-plx="0.04" viewBox="0 0 400 230" preserveAspectRatio="xMidYMax meet"><g fill="none" stroke="currentColor" stroke-linecap="round"><path d="M20 225 A180 180 0 0 1 380 225" stroke-width="1.6"/><path d="M55 225 A145 145 0 0 1 345 225" stroke-width="1.6"/><path d="M90 225 A110 110 0 0 1 310 225" stroke-width="1.6"/><path d="M125 225 A75 75 0 0 1 275 225" stroke-width="1.6"/></g></svg>
+      <svg class="fan fan-mid" data-plx="0.09" viewBox="0 0 400 230" preserveAspectRatio="xMidYMax meet"><g fill="none" stroke="currentColor" stroke-linecap="round"><path d="M200 225 L200 45" stroke-width="1.4"/><path d="M200 225 L96 84" stroke-width="1.4"/><path d="M200 225 L304 84" stroke-width="1.4"/><path d="M200 225 L48 140" stroke-width="1.4"/><path d="M200 225 L352 140" stroke-width="1.4"/></g></svg>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span class="line reveal" data-i18n="hero.t1">L'avocat,</span>
+          <span class="line reveal em" data-i18n="hero.t2">en éventail.</span>
+        </h1>
+        <p class="hero-sub reveal" data-i18n="hero.sub">Salades, poke bowls et toasts à l'avocat, faits maison, le midi seulement.</p>
+        <div class="hero-ctas reveal">
+          <a class="btn btn-primary" href="#carte" data-i18n="hero.cta1">Voir la carte</a>
+          <a class="btn btn-ghost" href="tel:+41225597477" data-i18n="hero.cta2">Appeler la cuisine</a>
+        </div>
+        <p class="hero-press reveal" data-i18n="hero.press">Sélectionné par Genève Tourisme dans « Manger sain à Genève »</p>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-frame" data-tilt>
+          <div class="hero-img-wrap">
+            <img class="hero-img" src="assets/hero-avocat.webp" alt="Avocat tranché en éventail sur une assiette en céramique, à côté d'un toast au levain" data-i18n-alt="hero.imgAlt" width="1200" height="900">
+          </div>
+          <div class="hero-ticket" aria-hidden="true">
+            <span class="ticket-big" data-i18n="hero.ticket1">Midi seulement</span>
+            <span class="ticket-small" data-i18n="hero.ticket2">10 h 30 à 14 h 00, en semaine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="strip" aria-label="En bref">
+    <div class="strip-cell reveal"><span class="strip-big" data-i18n="strip.1b">En semaine</span><span class="strip-small" data-i18n="strip.1s">le midi seulement</span></div>
+    <div class="strip-cell reveal"><span class="strip-big" data-i18n="strip.2b">Fait maison</span><span class="strip-small" data-i18n="strip.2s">« healthy homemade food »</span></div>
+    <div class="strip-cell reveal"><span class="strip-big" data-i18n="strip.3b">Terrasse</span><span class="strip-small" data-i18n="strip.3s">au soleil, aux Eaux-Vives</span></div>
+    <div class="strip-cell reveal"><span class="strip-big" data-i18n="strip.4b">Genève Tourisme</span><span class="strip-small" data-i18n="strip.4s">sélection « Manger sain »</span></div>
+  </section>
+
+  <!-- LA CARTE -->
+  <section class="carte" id="carte">
+    <svg class="fan-divider" id="fanDivider" viewBox="0 0 400 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round"><path d="M60 115 A140 140 0 0 1 340 115" stroke-width="2"/><path d="M105 115 A95 95 0 0 1 295 115" stroke-width="2"/><path d="M150 115 A50 50 0 0 1 250 115" stroke-width="2"/><path d="M200 115 L200 22" stroke-width="2"/><path d="M200 115 L122 40" stroke-width="2"/><path d="M200 115 L278 40" stroke-width="2"/></g></svg>
+    <div class="section-head">
+      <h2 class="reveal" data-i18n="carte.title">Cinq assiettes, un fruit.</h2>
+      <p class="section-lede reveal" data-i18n="carte.lede">La maison construit tout autour de l'avocat. Voici ce que sa propre carte, et Genève Tourisme, racontent d'elle.</p>
+    </div>
+
+    <ol class="carte-list">
+      <li class="carte-row reveal">
+        <span class="carte-num">01</span>
+        <div class="carte-body">
+          <h3 data-i18n="dish.1t">Avocado toast</h3>
+          <p data-i18n="dish.1d">La signature : l'avocat en éventail sur toast. Coloré, frais, Genève Tourisme le dit « très Instagram ».</p>
+        </div>
+        <span class="carte-tag" data-i18n="dish.1tag">La signature</span>
+      </li>
+      <li class="carte-row reveal">
+        <span class="carte-num">02</span>
+        <div class="carte-body">
+          <h3 data-i18n="dish.2t">Avocado brunch</h3>
+          <p data-i18n="dish.2d">Le brunch de la maison, construit autour de l'avocat, pour les midis qui prennent leur temps.</p>
+        </div>
+        <span class="carte-tag" data-i18n="dish.2tag">Le brunch</span>
+      </li>
+      <li class="carte-row reveal">
+        <span class="carte-num">03</span>
+        <div class="carte-body">
+          <h3 data-i18n="dish.3t">Tataki de thon</h3>
+          <p data-i18n="dish.3d">Le thon juste saisi, à la japonaise, la touche fraîche de la carte.</p>
+        </div>
+        <span class="carte-tag" data-i18n="dish.3tag">Le saisi</span>
+      </li>
+      <li class="carte-row reveal">
+        <span class="carte-num">04</span>
+        <div class="carte-body">
+          <h3 data-i18n="dish.4t">Tuna bowl</h3>
+          <p data-i18n="dish.4d">Le poke bowl au thon de la maison, frais, coloré, complet.</p>
+        </div>
+        <span class="carte-tag" data-i18n="dish.4tag">Le bowl</span>
+      </li>
+      <li class="carte-row reveal">
+        <span class="carte-num">05</span>
+        <div class="carte-body">
+          <h3 data-i18n="dish.5t">Tofu bowl</h3>
+          <p data-i18n="dish.5d">Le bowl végétal au tofu, la réponse de la maison aux envies légères.</p>
+        </div>
+        <span class="carte-tag" data-i18n="dish.5tag">Le végétal</span>
+      </li>
+      <li class="carte-row reveal">
+        <span class="carte-num">06</span>
+        <div class="carte-body">
+          <h3 data-i18n="dish.6t">Salades</h3>
+          <p data-i18n="dish.6d">Les salades du midi, composées fraîches au comptoir.</p>
+        </div>
+        <span class="carte-tag" data-i18n="dish.6tag">Le frais</span>
+      </li>
+    </ol>
+    <p class="carte-note reveal" data-i18n="carte.note">La carte vit au rythme des jours : cette page ne montre pas de prix, car la maison n'en publie pas en ligne. Un plat vous fait envie ? Appelez avant de passer.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="images">
+    <div class="section-head">
+      <h2 class="reveal" data-i18n="gal.title">Le vert, en profondeur.</h2>
+    </div>
+    <div class="gallery-track" id="galleryTrack">
+      <figure class="g-card reveal">
+        <div class="g-frame"><img src="assets/toast.webp" alt="Avocado toast avec œuf poché, radis et graines" data-i18n-alt="gal.1a" width="1000" height="750"></div>
+        <figcaption data-i18n="gal.1c">L'avocado toast, en gros plan</figcaption>
+      </figure>
+      <figure class="g-card reveal">
+        <div class="g-frame"><img src="assets/bowl-thon.webp" alt="Poke bowl au tataki de thon, avocat et edamame" data-i18n-alt="gal.2a" width="1000" height="750"></div>
+        <figcaption data-i18n="gal.2c">Le tuna bowl et son tataki</figcaption>
+      </figure>
+      <figure class="g-card reveal">
+        <div class="g-frame"><img src="assets/bowl-tofu.webp" alt="Bowl végétal au tofu grillé, avocat, quinoa et patate douce" data-i18n-alt="gal.3a" width="1000" height="750"></div>
+        <figcaption data-i18n="gal.3c">Le tofu bowl, tout végétal</figcaption>
+      </figure>
+      <figure class="g-card reveal">
+        <div class="g-frame"><img src="assets/comptoir.webp" alt="Au comptoir : les mains composent un bowl de salade fraîche" data-i18n-alt="gal.4a" width="1000" height="750"></div>
+        <figcaption data-i18n="gal.4c">Au comptoir, fait maison</figcaption>
+      </figure>
+    </div>
+    <p class="gallery-hint reveal" data-i18n="gal.hint">Faites glisser pour parcourir →</p>
+  </section>
+
+  <!-- RITUEL -->
+  <section class="rituel" id="rituel">
+    <div class="section-head">
+      <h2 class="reveal" data-i18n="rit.title">Une journée de trois heures et demie.</h2>
+      <p class="section-lede reveal" data-i18n="rit.lede">AvoBreak ne sert que le midi, du lundi au vendredi. Toute la maison tient dans ce court créneau, et c'est ce qui fait son charme.</p>
+    </div>
+    <div class="rituel-grid">
+      <article class="rituel-card reveal">
+        <span class="rituel-hour">10 h 30</span>
+        <h3 data-i18n="rit.1t">Le comptoir ouvre</h3>
+        <p data-i18n="rit.1d">Tout est fait maison, préparé pour le service du midi : avocats ouverts à la commande, salades composées, bowls montés au comptoir.</p>
+      </article>
+      <article class="rituel-card reveal">
+        <span class="rituel-hour">12 h 00</span>
+        <h3 data-i18n="rit.2t">La terrasse se remplit</h3>
+        <p data-i18n="rit.2d">Aux Eaux-Vives, la pause de midi se prend dehors quand le soleil est là, Genève Tourisme la recommande pour les déjeuners ensoleillés.</p>
+      </article>
+      <article class="rituel-card reveal">
+        <span class="rituel-hour">14 h 00</span>
+        <h3 data-i18n="rit.3t">Rideau</h3>
+        <p data-i18n="rit.3d">Le service se termine. On se retrouve le prochain jour de semaine, dès 10 h 30, même rue, même éventail.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- TERRACE BAND -->
+  <section class="terrace">
+    <div class="terrace-frame">
+      <img class="terrace-img" id="terraceImg" src="assets/terrasse.webp" alt="Terrasse ensoleillée : tables en bois, plantes, un avocado toast et un café" data-i18n-alt="ter.alt" width="1400" height="1000">
+    </div>
+    <blockquote class="terrace-quote reveal">
+      <p data-i18n="ter.quote">« Ever dreamt of an avocado bar? AvoBreak has done it! »</p>
+      <cite data-i18n="ter.cite">Genève Tourisme, « Manger sain à Genève » (en anglais)</cite>
+    </blockquote>
+  </section>
+
+  <!-- VISITE -->
+  <section class="visite" id="visite">
+    <div class="section-head">
+      <h2 class="reveal" data-i18n="vis.title">Rue Adrien-Lachenal 6.</h2>
+    </div>
+    <div class="visite-grid">
+      <div class="visite-card reveal">
+        <h3 data-i18n="vis.hoursT">Horaires</h3>
+        <table class="hours-table">
+          <tr><th data-i18n="vis.monfri">Lundi à vendredi</th><td>10 h 30 à 14 h 00</td></tr>
+          <tr><th data-i18n="vis.sat">Samedi</th><td data-i18n="vis.closed1">Fermé</td></tr>
+          <tr><th data-i18n="vis.sun">Dimanche</th><td data-i18n="vis.closed2">Fermé</td></tr>
+        </table>
+        <p class="visite-note" data-i18n="vis.hoursNote">Horaires selon le profil Google de la maison, un doute ? Un coup de fil avant de passer.</p>
+      </div>
+      <div class="visite-card reveal">
+        <h3 data-i18n="vis.contactT">Nous trouver</h3>
+        <p class="visite-line"><strong data-i18n="vis.addrL">Adresse</strong><span>Rue Adrien-Lachenal 6, 1207 Genève</span></p>
+        <p class="visite-line"><strong data-i18n="vis.telL">Téléphone</strong><a href="tel:+41225597477">022 559 74 77</a></p>
+        <p class="visite-line"><strong>Instagram</strong><a href="https://www.instagram.com/avobreak" target="_blank" rel="noopener">@avobreak</a></p>
+        <p class="visite-line"><strong>Facebook</strong><a href="https://www.facebook.com/106515004455712" target="_blank" rel="noopener" data-i18n="vis.fbPage">La page de la maison</a></p>
+        <div class="visite-ctas">
+          <a class="btn btn-primary" href="tel:+41225597477" data-i18n="vis.ctaCall">Appeler</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=AvoBreak+Rue+Adrien-Lachenal+6+1207+Gen%C3%A8ve" target="_blank" rel="noopener" data-i18n="vis.ctaDir">Itinéraire</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <svg class="brand-fan" viewBox="0 0 48 30" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 27 A18 18 0 0 1 42 27"/><path d="M12.5 27 A11.5 11.5 0 0 1 35.5 27"/><path d="M19 27 A5 5 0 0 1 29 27"/><path d="M24 27 L24 9"/><path d="M24 27 L11 14"/><path d="M24 27 L37 14"/></g></svg>
+    <span>AvoBreak · Eaux-Vives, Genève</span>
+  </div>
+  <p class="footer-note" data-i18n="foot.note">Site conceptuel de démonstration, non officiel. Les photographies sont des images d'ambiance générées ; les informations (adresse, horaires, carte) proviennent des profils publics de la maison et de Genève Tourisme, et restent à confirmer par l'établissement.</p>
+</footer>
+
+<nav class="mobile-bar" aria-label="Actions rapides">
+  <a href="tel:+41225597477" data-i18n="mob.call">Appeler</a>
+  <a href="#carte" data-i18n="mob.carte">La carte</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=AvoBreak+Rue+Adrien-Lachenal+6+1207+Gen%C3%A8ve" target="_blank" rel="noopener" data-i18n="mob.dir">Itinéraire</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
